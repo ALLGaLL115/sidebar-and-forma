@@ -1,0 +1,22 @@
+.sidebar {
+    width: 20%;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidebar-img{
+    height: 21px;
+    width: 21px;
+    margin-right: 10px;
+}
+
+.sidebar-item {
+    list-style-type: none;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+    margin: 5px;
+}
