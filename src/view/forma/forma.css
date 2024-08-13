@@ -16,6 +16,19 @@ label{
     color: #959EA4;
 }
 
+.label-with-mandatory {
+    padding-top: 15px;
+    padding-right: 15px;
+
+    color: #959EA4;
+}
+
+.label-with-mandatory::after{
+    content: ' *';
+    color: #FF7A00;
+    margin-left: 5px;
+}
+
 p {
     font-style: normal;
 }
@@ -154,3 +167,4 @@ p {
 
     margin: 15px 0;
 }
+
