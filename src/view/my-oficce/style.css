@@ -1,0 +1,36 @@
+
+body{
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+
+
+
+.office-page{
+    width: 1400px;
+
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    padding: 100px;
+
+    /* background-color: aquamarine; */
+
+}
+    
+.office-page h1 {
+    align-self: flex-start;
+
+}
+
+.office-page-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    margin: auto;
+
+}
