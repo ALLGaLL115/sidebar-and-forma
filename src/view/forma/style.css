@@ -1,6 +1,11 @@
 
 body {
-    width: 750px;
+    display: flex;
+    flex-direction: column;
+    /* width: 750px; */
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
     
 }
 
@@ -11,7 +16,11 @@ label{
     color: #959EA4;
 }
 
+p {
+    font-style: normal;
+}
 .profile-menu-container {
+    width: 660px;
     height: 50px;
     box-sizing:border-box;
     padding: 3px;
@@ -34,6 +43,15 @@ label{
 }
 
 .forma {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    /* justify-content: flex-start; */
+    /* background-color: #959EA4; */
+    padding: 45px;
+}
+
+.fields-container {
     width: 420px;
 
     box-sizing: border-box;
@@ -51,8 +69,7 @@ label{
 
     background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
     background-repeat: no-repeat;
-    background-position-x: 400px;
-    background-position-y: center;
+    background-position: right 20px center;
 
     padding: 15px;
 }
@@ -64,8 +81,8 @@ label{
 
     background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
     background-repeat: no-repeat;
-    background-position-x: 175px;
-    background-position-y: center;
+    background-position: right 20px center;
+
     
     padding: 15px;
 }
@@ -87,13 +104,15 @@ label{
     height: 50px;
     display: inline-block;
     box-sizing: border-box;
+    vertical-align: middle;
     
 
     background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/seraya-galochka.png");
     background-repeat: no-repeat;
     background-position: right 10px center;
 
-    padding: 15px;
+    /* padding: 15px; */
+    padding: 0 15px;
     /* margin-left: 10px; */
 }
 

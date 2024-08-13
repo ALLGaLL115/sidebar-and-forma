@@ -6,55 +6,63 @@
     <link rel="stylesheet", href="./style.css"/>
 </head>
 <body>
-    <h1>Мой профиль</h1>
-    <div class="profile-menu-container">
-        <div class="profile-menu-box" style="background-color: white;">
-            <p style="font-weight: bold;">Личные данные</p>
-        </div>
-        <div class="profile-menu-box">
-            <p>Адрес доставки</p>
-        </div>
-        <div class="profile-menu-box">
-            <p>Пароль</p>
-        </div>
-    </div>
-    <div class="forma" style="width:420px;">
-        <label>E-mail</label>
-        <input type="text" class="input-with-icon classic-border">
-        <div class="phones-line"> 
-            <div style="padding-right: 15px;">
-                <label>Номер телефона</label>
-                <input type="text"  class="short-input-with-icon classic-border">
+    <div class="forma">
+        <h1>Мой профиль</h1>
+        <div class="profile-menu-container">
+            <div class="profile-menu-box" style="background-color: white;">
+                <p style="font-weight: bold; font: 'Roboto';">Личные данные</p>
             </div>
+            <div class="profile-menu-box">
+                <p>Адрес доставки</p>
+            </div>
+            <div class="profile-menu-box">
+                <p>Пароль</p>
+            </div>
+        </div>
+        <div class="fields-container" style="width:420px;">
+            <label>E-mail</label>
+            <div class="input-with-icon classic-border">example@mail.ru</div>
+            <div class="phones-line"> 
+                <div style="padding-right: 15px;">
+                    <label>Номер телефона</label>
+                    <div  class="short-input-with-icon classic-border">8 800 555 35 35</div>
+                </div>
+                <div>
+                    <label>Дополнительный номер</label>
+                    <div  class="short-input-with-icon classic-border" style="background-image: none;"></div>
+                </div>
+            </div>
+            <label>Фамилия</label>
+            <div class="input-with-icon classic-border">Галачиев</div>
+            <label>Имя</label>
+            <div class="input-with-icon classic-border">Алихан</div>
+            <label>Отчество</label>
+            <div class="input-with-icon classic-border">Маратович</div>
+
+            <label>Дата рождения</label>
+            <div class="birthday-container">
+                <div class="birthday-box classic-border" style="width: 120px;">
+                    <p>1</p>
+                </div>
+                <div class="birthday-box classic-border" style="width: 160px;">
+                    <p>Января</p>
+                </div>
+                <div class="birthday-box classic-border" style="width: 120px;">
+                    <p>1998</p>
+                </div>
+            </div>
+
+            <label>Пол</label>
             <div>
-                <label>Дополнительный номер</label>
-                <input type="text"  class="short-input-with-icon classic-border" style="background-image: none;">
+                <div class="gender-box classic-border">Мужской</div>
+                <div class="gender-box classic-border" style="background-image: none;">Женский</div>
+            </div>
+
+            <div class="save-button" style="border-radius: 10px;">
+                <p>Сохранить изменения</p>
             </div>
         </div>
-        <label>Фамилия</label>
-        <input type="text" class="input-with-icon classic-border">
-        <label>Имя</label>
-        <input type="text" class="input-with-icon classic-border">
-        <label>Отчество</label>
-        <input type="text" class="input-with-icon classic-border">
-
-        <label>Дата рождения</label>
-        <div class="birthday-container">
-            <div class="birthday-box classic-border" style="width: 120px;"></div>
-            <div class="birthday-box classic-border" style="width: 160px;"></div>
-            <div class="birthday-box classic-border" style="width: 120px;"></div>
-        </div>
-
-        <label>Пол</label>
-        <div>
-            <div class="gender-box classic-border">Мужской</div>
-            <div class="gender-box classic-border" style="background-image: none;">Женский</div>
-        </div>
-
-        <div class="save-button" style="border-radius: 10px;">
-            <p>Сохранить изменения</p>
-        </div>
-    </div>
+    </div">
 
     
 </body>
