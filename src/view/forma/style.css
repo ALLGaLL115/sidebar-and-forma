@@ -1,0 +1,134 @@
+
+body {
+    width: 750px;
+    
+}
+
+label{
+    padding-top: 15px;
+    padding-right: 15px;
+
+    color: #959EA4;
+}
+
+.profile-menu-container {
+    height: 50px;
+    box-sizing:border-box;
+    padding: 3px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+
+}
+
+.profile-menu-box {
+    display: inline-block;  
+    height: 44px;
+    position: relative;
+    /* box-sizing: border-box; */
+    padding: 0 15px;
+    /* margin: 3px;/ */
+    align-content: center;
+    border-radius: 10px;
+    /* background-color: transparent; */ 
+
+}
+
+.forma {
+    width: 420px;
+
+    box-sizing: border-box;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.input-with-icon {
+    width: 420px;
+    height: 50px;
+    box-sizing: border-box;
+
+    background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
+    background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: center;
+
+    padding: 15px;
+}
+
+.short-input-with-icon {
+    width: 205px;
+    height: 50px;
+    box-sizing: border-box;
+
+    background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
+    background-repeat: no-repeat;
+    background-position-x: 175px;
+    background-position-y: center;
+    
+    padding: 15px;
+}
+
+
+.phones-line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.birthday-container{ 
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.birthday-box {
+    height: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    
+
+    background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/seraya-galochka.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+
+    padding: 15px;
+    /* margin-left: 10px; */
+}
+
+.gender-box {
+    width: 130px;
+    height: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+
+    background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+
+    padding: 15px;
+    margin-right: 5px;
+    text-align: start;
+    align-content: center; 
+}
+
+
+.classic-border {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.save-button {
+    height: 50px;
+    width: 270px;
+    box-sizing: border-box;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: white;
+    background-color: #FF7A00;
+
+    margin: 15px 0;
+}
