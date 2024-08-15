@@ -59,11 +59,11 @@ p {
     width: 750px;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: flex-start;  
     justify-content: flex-start;
     /* background-color: #959EA4; */
     background-color: white;
-    padding: 0 45px;
+    padding: 0 45px 45px 45px;
     border-radius: 10px;
 }
 
@@ -165,6 +165,8 @@ p {
     color: white;
     background-color: #FF7A00;
 
-    margin: 15px 0;
+
+
+    margin: 30px 0;
 }
 
