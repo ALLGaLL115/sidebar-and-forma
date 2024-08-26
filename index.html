@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>My office</title>    
+    <link rel="stylesheet" href="css/cblocks/forma.css">
+    <link rel="stylesheet" href="css/cblocks/sidebar.css">
+    <link rel="stylesheet" href="css/my-office-page.css"
+</head>
+<body style="background-color: #F9F9FA;">
+    <div class="office-page">
+        <h1>Мой кабинет</h1>
+        
+        <div class="office-page-body">
+
+            <div class="sidebar">
+        
+                <div class="sidebar__header">
+                        <p>Алихан Галачиев</p>
+                        <p>Покупатель</p>
+                </div>  
+                <div class="sidebar__item sidebar__item--active">Мой профиль</div>
+                <div class="sidebar__item">Status Club</div>
+                <div class="sidebar__item">Заказы</div><div class="sidebar__item">Избранные товары</div>  
+                <div class="sidebar__item">Отзывы о товарах</div>
+                <div class="sidebar__item">Выход</div>
+                
+            </div>
+
+
+            <div class="forma">
+                <h1>Мой профиль</h1>
+                <div class="forma__profile-menu-container">
+                        <div class="forma__profile-menu-box  forma__profile-menu-box--active">
+                            Личные данные
+                        </div>
+                        <div class="forma__profile-menu-box">
+                            Адрес доставки
+                        </div>
+                        <div class="forma__profile-menu-box">
+                            Пароль
+                        </div>
+                </div>
+        
+                <label class="forma__label label--required">E-mail</label>
+                <div class="forma__input">example@mail.ru</div>
+                <div class="forma__phones_block"> 
+                    <div>
+                        <label class="forma__label--required">Номер телефона</label>
+                        <div  class="forma__input forma__input--short">8 800 555 35 35</div>
+                    </div>
+                    <div>
+                        <label class="forma__label">Дополнительный номер</label>
+                        <div  class="forma__input forma__input--short" style="background-image: none;"></div>
+                    </div>
+                </div>
+        
+                <label class="forma__label label--required">Фамилия</label>
+                <div class="forma__input">Галачиев</div>   
+                <label class="forma__label label--required">Имя</label>
+                <div class="forma__input">Алихан</div>
+                <label class="forma__label">Отчество</label>
+                <div class="forma__input">Маратович</div>
+        
+                <label class="forma__label">Дата рождения</label>
+                <div class="birthday-container">
+                    <div class="forma__birthday-box" style="width: 120px;">
+                        <p>1</p>
+                    </div>
+                    <div class="forma__birthday-box" style="width: 160px;">
+                        <p>Января</p>
+                    </div>
+                    <div class="forma__birthday-box" style="width: 120px;">
+                        <p>1998</p>
+                    </div>
+                </div>
+        
+                <label class="forma__label">Пол</label>
+                <div>
+                    <div class="forma__gender-box">Мужской</div>
+                    <div class="forma__gender-box">Женский</div>
+                </div>
+        
+                <div class="forma__save-button" style="border-radius: 10px;">
+                    <p>Сохранить изменения</p>
+                </div>
+            </div">
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        (function(){
+            let sidebar__item = $('.sidebar__item');
+
+            sidebar__item.on('click', function() {
+                console.log($(this).text())
+                sidebar__item.removeClass('sidebar__item--active')
+                $(this).addClass('sidebar__item--active')
+            })
+        }) () 
+    </script>
+</body>
+</html>

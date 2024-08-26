@@ -1,0 +1,83 @@
+.sidebar {
+    width: 360px;
+    height: 461px;
+    min-height: 461px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 30px;
+    background-color: white;
+}
+
+.sidebar__header {
+    height: 60px;
+    min-height: 60px;
+    /* padding: auto; */
+
+    padding-left: 61px;
+    margin-bottom: 15px;
+    box-sizing: content-box;
+    border-radius: 10px;
+
+
+    background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/smiilik.png");
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: center;
+    background-color: #F9F9FA;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar__header p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sidebar__item {
+    height: 60px;
+    vertical-align: middle;
+    line-height: 60px;
+    /* position: relative; */
+    /* margin: 5px; */
+    /* background-color: aqua; */
+    border-top: 1px solid lightgrey;
+
+
+}
+
+
+/* .sidebar__item::before {
+    content: "aaaaaaa";
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ff6f61;
+} */
+
+
+
+.sidebar__item::before {
+    content: ''; 
+    height: 60px;
+    width: 5px;
+    position: absolute;
+    left: 0px;
+    border-radius: 4px;
+    background-color: transparent; 
+   }
+
+.sidebar__item--active::before {
+    background-color: orange; /* Оранжевый цвет при активации */
+}

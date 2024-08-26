@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        .features__content {
+            display: none; /* По умолчанию скрыто */
+            padding: 30px 0;
+            align-items: flex-start; /* Исправлено значение */
+            justify-content: space-between;
+            /* Дополнительные стили, если необходимо */
+        }
+
+        .features__content--active {
+            display: flex; /* Показывает элемент при добавлении класса active */
+        }
+
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Toggle Content</button>
+    <div class="features__content" id="featuresContent">
+        <p>Some content here...</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <script>
+
+        (function() {
+            $('#toggleButton').on('click', function() {
+                $('.features__content').toggleClass('features__content--active');
+            })
+        }) ()
+        // document.getElementById('toggleButton').addEventListener('click', function() {
+        //     document.getElementById('featuresContent').classList.toggle('features__content--active');
+        // });
+    </script>
+
+</body>
+</html>

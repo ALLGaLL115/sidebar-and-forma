@@ -9,25 +9,7 @@ body {
     
 }
 
-label{
-    padding-top: 15px;
-    padding-right: 15px;
 
-    color: #959EA4;
-}
-
-.label-with-mandatory {
-    padding-top: 15px;
-    padding-right: 15px;
-
-    color: #959EA4;
-}
-
-.label-with-mandatory::after{
-    content: ' *';
-    color: #FF7A00;
-    margin-left: 5px;
-}
 
 p {
     font-style: normal;
@@ -46,12 +28,9 @@ p {
     display: inline-block;  
     height: 44px;
     position: relative;
-    /* box-sizing: border-box; */
     padding: 0 15px;
-    /* margin: 3px;/ */
     align-content: center;
     border-radius: 10px;
-    /* background-color: transparent; */ 
 
 }
 
@@ -127,9 +106,7 @@ p {
     background-repeat: no-repeat;
     background-position: right 10px center;
 
-    /* padding: 15px; */
     padding: 0 15px;
-    /* margin-left: 10px; */
 }
 
 .gender-box {
