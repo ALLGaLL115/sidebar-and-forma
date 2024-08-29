@@ -17,10 +17,6 @@
     border: 1px solid #DFE2E4;
     border-radius: 4px;
 
-    /* background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
-    background-repeat: no-repeat;
-    background-position: right 20px center; */
-
     padding: 15px;
 }
     
@@ -33,7 +29,6 @@
 
 .forma__input--short {
     width: 205px;
-    margin-right: 15px;
 }
 
 
@@ -85,13 +80,16 @@
     background-color: white;
 }
 
+.forma__birthday-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .forma__birthday-box {
     height: 50px;
-    display: inline-block;
+    width: 120px;
     box-sizing: border-box;
-    vertical-align: middle;
-    
-
     border: 1px solid #DFE2E4;
     border-radius: 4px;
 
@@ -100,12 +98,25 @@
     background-position: right 10px center;
 
     padding: 0 15px;
+
 }
+
+.forma__birthday-box_months {
+    width: 160px;
+}
+
+
 
 .forma__phones_block {
     display: flex;
-    /* justify-content: space-between; */
-    padding-top: 15px;
+    gap: 15px;
+}
+
+.forma__phones_box{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    flex-shrink: 0;
 }
 
 

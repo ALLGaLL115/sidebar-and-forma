@@ -5,7 +5,8 @@
     <title>My office</title>    
     <link rel="stylesheet" href="css/cblocks/forma.css">
     <link rel="stylesheet" href="css/cblocks/sidebar.css">
-    <link rel="stylesheet" href="css/my-office-page.css"
+    <link rel="stylesheet" href="css/blocks/popup.css">
+    <link rel="stylesheet" href="css/pages/my-office-page.css"
 </head>
 <body style="background-color: #F9F9FA;">
     <div class="office-page">
@@ -43,35 +44,41 @@
                 </div>
         
                 <label class="forma__label forma__label--required">E-mail</label>
-                <div class="forma__input">example@mail.ru</div>
+                <input type="text" class="forma__input" id="email" placeholder="example@mail.ru" required></input>
                 <div class="forma__phones_block"> 
-                    <div>
-                        <label class="forma__label--required">Номер телефона</label>
-                        <div  class="forma__input forma__input--short">8 800 555 35 35</div>
+                    <div class="forma__phones_box">
+                        <label class="forma__label forma__label--required" >Номер телефона</label>
+                        <input type="text"  class="forma__input forma__input--short" id="phone"></input>
                     </div>
-                    <div>
+                    <div class="forma__phones_box">
                         <label class="forma__label">Дополнительный номер</label>
-                        <div  class="forma__input forma__input--short" style="background-image: none;"></div>
+                        <input type="text"  class="forma__input forma__input--short" id="additionalPhone"></input>
                     </div>
                 </div>
         
                 <label class="forma__label forma__label--required">Фамилия</label>
-                <div class="forma__input">Галачиев</div>   
+                <input type="text" class="forma__input" id="surname"></input>
                 <label class="forma__label forma__label--required">Имя</label>
-                <div class="forma__input">Алихан</div>
+                <input type="text" class="forma__input" id="name"></input>
                 <label class="forma__label">Отчество</label>
-                <div class="forma__input">Маратович</div>
+                <input type="text" class="forma__input" id="fatherName"></input>
         
                 <label class="forma__label">Дата рождения</label>
-                <div class="birthday-container">
-                    <div class="forma__birthday-box" style="width: 120px;">
-                        <p>1</p>
+
+                <div class="forma__birthday-container">
+                    <div class="forma__birthday-box"  >
+                         <p id="day">1</p>
+                        <ul class="popup" id="dayPopup"></ul>
                     </div>
-                    <div class="forma__birthday-box" style="width: 160px;">
-                        <p>Января</p>
+                  
+                    <div class="forma__birthday-box forma__birthday-box_months"  >
+                        <p id="month">Январь</p>
+                        <ul class="popup" id="monthPopup"></ul>
+                        
                     </div>
-                    <div class="forma__birthday-box" style="width: 120px;">
-                        <p>1998</p>
+                    <div class="forma__birthday-box">
+                        <p id="year">1998</p>
+                        <ul class="popup" id="yearPopup"></ul>
                     </div>
                 </div>
         
@@ -81,7 +88,7 @@
                     <div class="forma__gender-box">Женский</div>
                 </div>
         
-                <div class="forma__save-button" style="border-radius: 10px;">
+                <div class="forma__save-button" id="saveButton">
                     <p>Сохранить изменения</p>
                 </div>
             </div">
@@ -92,15 +99,128 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
     <script>
-        (function(){
-            let sidebar__item = $('.sidebar__item');
+        // Инициализация элементов через jQuery
 
-            sidebar__item.on('click', function() {
-                console.log($(this).text())
-                sidebar__item.removeClass('sidebar__item--active')
-                $(this).addClass('sidebar__item--active')
+        
+        $(document).ready(function() {
+           
+            const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+
+            // const dayPopup = $('#dayPopup');
+            for (let i = 1; i< 31; i++) {
+                $('#dayPopup').append(`<li class="popup__item">${i}</li>`);
+            }
+
+            months.forEach(function(value){
+                $('#monthPopup').append(`<li class="popup__item">${value}</li>`)
             })
-        }) () 
+
+            for (let i = 1980; i < 2030; i++) {
+                $('#yearPopup').append(`<li class="popup__item">${i}</li>`);
+                
+            }
+
+            $('.forma__birthday-box').on('click', function() {
+                if($('.popup--active').length == 0) {
+                    $(this).find('.popup').toggleClass('popup--active');
+                } else {
+                    $('.popup--active').removeClass('popup--active');
+                    $(this).find('.popup').toggleClass('popup--active');
+                }
+            })
+
+            $('.popup__item').on('click', function(event) {
+                event.stopPropagation();
+                
+                const item = $(this);
+                console.log(item.text());
+                console.log(item.parents('.forma__birthday-box').children('p').text(item.text()));
+                $('.popup--active').removeClass('popup--active');
+            });
+
+            $(document).click(function(event) {
+                if (!$(event.target).closest('.popup, .forma__birthday-box').length) {
+                    $('.popup').removeClass('popup--active');
+                }
+            });
+
+            $('.forma__gender-box').on('click', function() {
+                const className = 'forma__gender-box--active';
+                
+                if(!$(this).hasClass(className)) {
+                    $('.' + className).removeClass(className);
+                    $(this).addClass(className);
+                }
+
+            });
+
+            $('#saveButton').on('click', function() {
+                const newUser ={
+                    
+                        email: $('#email').val(),
+                        phone: $('#phone').val(),
+                        additionalPhone: $('#additionalPhone').val(),
+                        surname: $('#surname').val(),
+                        name: $('#name').val(),
+                        fatherName: $('#fatherName').val(),
+                        day: $('#day').text(),
+                        month: $('#month').text(),
+                        year: $('#year').text(),
+                }
+
+                // if (validateEmail(newUser.email) && validatePhoneNumber(newUser.phone)){
+                //     console.log(newUser);
+                // } else {
+                    
+                // }
+                console.log(validateEmail(newUser.email));
+                console.log(validatePhoneNumber(newUser.phone));
+            });
+
+            function validateEmail(email) {
+                const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+                return emailPattern.test(email);
+            }
+
+            function validatePhoneNumber(phone) {
+                const phonePattern = /^\d{10}$/; // Простой пример для 10-значного номера
+                return phonePattern.test(phone);
+            }
+
+            
+
+
+    
+            // Показать/скрыть popup по клику
+            // $('forma__birthday-box').on('click', function() {});
+
+    
+            // dayPopup.click(function(event) {
+            //     event.stopPropagation();
+            // });
+
+    // Обработчик клика по элементам списка
+            // $('.popup__item').on('click', function() {
+            //     console.log($(this).parent('.popup'));
+            //     alert($(this).text());
+
+                
+            // })
+            
+                // dayPopup.on('click', '.popup__item', function() {
+                    
+                //     $('#day').find('p').text($(this).text());
+                //     dayPopup.removeClass('popup--active');
+                // });
+
+            // $('#saveButton').on('click', function() {
+                
+            //     console.log($('.popup--active').length);
+            // });
+
+            
+        });
     </script>
+    
 </body>
 </html>

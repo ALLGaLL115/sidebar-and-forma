@@ -1,0 +1,46 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.popup-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popup-trigger {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.popup-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.popup-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-list ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.popup-list ul li:hover {
+    background-color: #f1f1f1;
+}
