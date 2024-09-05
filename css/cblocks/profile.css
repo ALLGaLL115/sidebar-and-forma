@@ -1,4 +1,4 @@
-.forma {
+.profile {
     width: 750px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     border-radius: 10px;
 }
 
-.forma__input {
+.profile input {
     width: 420px;
     height: 50px;
     box-sizing: border-box;
@@ -19,29 +19,28 @@
 
     padding: 15px;
 }
-    
-.forma__input--filled {
-    background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
-    background-repeat: no-repeat;
-    background-position: right 20px center;
+
+.profile .short-inputs{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-
-.forma__input--short {
+.profile input.short {
     width: 205px;
 }
 
 
-
-.forma__label{
-    padding-top: 15px;
-    padding-right: 15px;
-
-    /* color: #959EA4; */
-    
+.profile label{
+    display: block;
+    margin-top: 15px;
 }
 
-.forma__label--required::after{
+.profile label[for="sdfsdf"]::after,
+.profile label[for="phone"]::after,
+.profile label[for="surname"]::after,
+.profile label[for="name"]::after
+{
     content: '*';
     color: #FF7A00;
     margin-left: 5px;
@@ -49,7 +48,9 @@
 
 
 
-.forma__profile-menu-container {
+
+
+.profile__menu-container {
     width: 660px;
     height: 50px;
 
@@ -62,7 +63,7 @@
 
 }
 
-.forma__profile-menu-box {
+.profile__menu-box {
     display: inline-block;  
     height: 44px;
     position: relative;
@@ -73,20 +74,20 @@
 
 }
 
-.forma__profile-menu-box--active {
+.profile__menu-box--active {
     font-weight: bold; 
     font: 'Roboto';
     font-weight: bold;
     background-color: white;
 }
 
-.forma__birthday-container {
+.profile__birthday-container {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-.forma__birthday-box {
+.profile__birthday-box {
     height: 50px;
     width: 120px;
     box-sizing: border-box;
@@ -101,18 +102,18 @@
 
 }
 
-.forma__birthday-box_months {
+.profile__birthday-box_months {
     width: 160px;
 }
 
 
 
-.forma__phones_block {
+.profile__phones_block {
     display: flex;
     gap: 15px;
 }
 
-.forma__phones_box{
+.profile__phones_box{
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -120,7 +121,7 @@
 }
 
 
-.forma__gender-box {
+input.profile__gender-box {
     width: 130px;
     height: 50px;
     display: inline-block;
@@ -135,7 +136,9 @@
     align-content: center; 
 }
 
-.forma__gender-box--active {
+
+
+input.profile__gender-box--active {
     color:#FF7A00;
     border: 1px solid #FF7A00;
 
@@ -146,7 +149,8 @@
 }
 
 
-.forma__save-button {
+
+.profile input.save-button {
     height: 50px;
     width: 270px;
     box-sizing: border-box;
