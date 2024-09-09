@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     function formatPhoneNumber(input) {
@@ -161,10 +162,26 @@ $(document).ready(function() {
         const formData = new FormData(form);
         formData.append('birthday', date);
        
-        fetch('http://localhost:9000/app/profile/index', {
+        fetch('http://localhost:9000/profile/save_info', {
             method: 'POST',
             body: formData
-        });
+        })
+        .then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            } else if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Network response error');
+            }
+        })
+        .then(data => {
+            console.log('Success', data);
+        })
+        .catch(error => {
+            console.error('Error', error);
+        })
+        ;
 
         function validate_mail(mail) {
             const regexes = [/@yandex\.ru/, /@gmail\.com/, /@mail\.ru/]

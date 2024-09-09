@@ -18,6 +18,7 @@ class Route {
             $action_name = $routes[2];
         }
         error_log($controller_name.'/'.$action_name.'/'); 
+        
 
         $model_name = 'Model_'.$controller_name;
         $controller_name = 'Controller_'.$controller_name;
@@ -40,11 +41,14 @@ class Route {
         {
             Route::ErrorPage404();
         }
+        error_log($controller_name);
+        error_log($action_name);
         $controller = new $controller_name;
         $action =  $action_name;
 
         if (method_exists( $controller, $action))
         {
+            error_log("method {$action} exists");
             $controller->$action();
         }
         else 
