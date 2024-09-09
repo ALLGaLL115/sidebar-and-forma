@@ -1,0 +1,152 @@
+.profile {
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  /* background-color: #959EA4; */
+  background-color: white;
+  padding: 45px;
+  border-radius: 10px;
+}
+.profile__input {
+  width: 420px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #DFE2E4;
+  border-radius: 4px;
+  padding: 15px;
+}
+.profile__input--short {
+  width: 205px;
+}
+.profile__input:valid {
+  background-image: url("http://127.0.0.1:8080/images/Icongalochka.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.profile__label {
+  display: block;
+  margin-top: 15px;
+}
+.profile .profile__label.required::after {
+  content: "*";
+  color: #FF7A00;
+  margin-left: 5px;
+}
+.profile__menu {
+  width: 660px;
+  height: 50px;
+  display: flex;
+  padding: 3px;
+  box-sizing: border-box;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+}
+.profile__menu .profile__menu-item {
+  display: inline-block;
+  height: 44px;
+  position: relative;
+  padding: 0 15px;
+  margin: 0px 2px;
+  align-content: center;
+  border-radius: 10px;
+}
+.profile__menu .profile__menu-item--active {
+  font-weight: bold;
+  font: "Roboto";
+  font-weight: bold;
+  background-color: white;
+}
+.profile__birthday {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.profile__birthday .profile__birthday-item {
+  height: 50px;
+  width: 120px;
+  box-sizing: border-box;
+  border: 1px solid #DFE2E4;
+  border-radius: 4px;
+  background-image: url("http://127.0.0.1:8080/images/seraya-galochka.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding: 0 15px;
+}
+.profile__birthday .profile__birthday-item--months {
+  width: 160px;
+}
+.profile__popup {
+  height: 120px;
+  width: 120px;
+  display: none;
+  padding-left: 0;
+  overflow: scroll;
+  position: absolute;
+  background-color: white;
+  scrollbar-width: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.profile__popup--active {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 2px;
+}
+.profile__popup .profile__popup p {
+  margin: 0;
+  line-height: 1.2;
+}
+.profile__popup .profile__popup li {
+  list-style-type: none;
+}
+.profile__popup .profile__popup-item {
+  height: 30px;
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+}
+.profile__phones {
+  display: flex;
+  gap: 15px;
+}
+.profile__phones .profile__phones_item {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-shrink: 0;
+}
+.profile__gender-item {
+  width: 130px;
+  height: 50px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #DFE2E4;
+  border-radius: 4px;
+  padding: 15px;
+  margin-right: 5px;
+  text-align: start;
+  align-content: center;
+}
+.profile__gender-item--active {
+  color: #FF7A00;
+  border: 1px solid #FF7A00;
+  background-image: url("http://127.0.0.1:8080/images/Icongalochka.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.profile__save-button {
+  height: 50px;
+  width: 270px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: #FF7A00;
+  margin: 30px 0;
+}/*# sourceMappingURL=profile.css.map */

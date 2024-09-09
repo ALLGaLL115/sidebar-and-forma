@@ -3,11 +3,12 @@ body{
     display: flex;
     flex: row;
     justify-content: center;
+    background-color: #F9F9FA;
 }
 
 
 
-.office-page{
+.office__page{
     width: 1400px;
 
     display: flex;
@@ -20,12 +21,12 @@ body{
 
 }
     
-.office-page h1 {
+.office__page h1 {
     align-self: flex-start;
 
 }
 
-.office-page-body {
+.office__body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
