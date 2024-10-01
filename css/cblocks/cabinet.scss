@@ -24,7 +24,7 @@
         }
 
         &:valid {
-            background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png");
+            background-image: url("../../images/Icongalochka.png");
             background-repeat: no-repeat;
             background-position: right 10px center;
         }
@@ -84,30 +84,6 @@
     }
 
 
-    &__birthday{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-
-        .profile__birthday-item {
-            height: 50px;
-            width: 120px;
-            box-sizing: border-box;
-            border: 1px solid #DFE2E4;
-            border-radius: 4px;
-    
-            background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/seraya-galochka.png");
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-    
-            padding: 0 15px;
-    
-        }
-    
-        .profile__birthday-item--months {
-            width: 160px;
-        }
-    }
 
     &__popup {
         height: 120px;
@@ -186,7 +162,7 @@
             color:#FF7A00;
             border: 1px solid #FF7A00;
     
-            background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png" );
+            background-image: url("../../images/Icongalochka.png" );
             background-repeat: no-repeat;
             background-position: right 10px center;
     
@@ -214,5 +190,22 @@
 
 
         margin: 30px 0;
+    }
+}
+
+select {
+    height: 50px;
+    width: 120px;
+    border: 1px solid #DFE2E4;
+    border-radius: 4px;
+    padding: 15px;
+    appearance: none;
+
+    background-image: url("../../images/seraya-galochka.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    &__month {
+        
+        width: 160px;
     }
 }

@@ -92,23 +92,14 @@
             pattern="[A-Za-zА-Яа-я]+"
         >
 
-        <label class="profile__label">Дата рождения</label>
-        <div class="profile__birthday">
-            <div class="profile__birthday-item"  >
-                <p id="day">1</p>
-                <ul class="profile__popup" id="dayPopup"></ul>
-            </div>
-        
-            <div class="profile__birthday-item profile__birthday-item_months">
-                <p id="month">Январь</p>
-                <ul class="profile__popup" id="monthPopup"></ul>
-                
-            </div>
-            <div class="profile__birthday-item">
-                <p id="year">1998</p>
-                <ul class="profile__popup" id="yearPopup"></ul>
-            </div>
-        </div>
+
+
+        <label class="profile__label" >Дата рождения</label>
+
+        <select id="day"></select>
+        <select name="month" id="month"></select>
+        <select name="year" id="year"></select>
+
 
         <label class="profile__label ">Пол</label>
         <div>
@@ -137,5 +128,59 @@
     </form>
                 
 </div>
+
+<script>
+   
+
+    function fillDays() {
+        const daySelect =document.getElementById('day');
+        daySelect.innerHTML = '';
+
+        for (let i = 1; i <= 31; i++) {
+            const option =document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            daySelect.appendChild(option);
+        }
+    }
+
+    function fillMonths() {
+        let months = [
+        'Январь', 'Февраль', 'Март', 'Апрель', 'Май',
+        'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь',
+        'Ноябрь', 'Декабрь', ];
+
+        const monthSelect =document.getElementById('month');
+        monthSelect.innerHTML = '';
+
+        months.forEach((month, index) => {
+            const option =document.createElement('option');
+            option.value = index + 1;
+            option.textContent = month;
+            monthSelect.appendChild(option);
+        });
+    }
+
+    function fillYears(){
+        const yearSelect =document.getElementById('year');
+        const currentYear = new Date().getFullYear();
+        const startYear = currentYear - 100;
+        yearSelect.innerHTML = '';
+
+        for (let i = startYear; i <= currentYear; i++) {
+            const option =document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            yearSelect.appendChild(option);
+        }
+
+    }
+
+    fillDays();
+    fillMonths();
+    fillYears();
+
+
+</script>
 
 

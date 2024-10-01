@@ -5,7 +5,7 @@
     <title>title</title>
     
     <link rel="stylesheet" href="../css/cblocks/sidebar.css">
-    <link rel="stylesheet" href="../css/pages/office.css">
+    <link rel="stylesheet" href="../css/pages/cabinet.css">
     <?php 
         if (isset($css_path)) {
             echo "<link rel='stylesheet' type='text/css' href={$css_path}>";
@@ -13,10 +13,10 @@
     ?>
 </head>
 <body>
-    <div class="office__page">
+    <div class="cabinet__page">
         <h1>Мой кабинет</h1>
         
-        <div class="office__body">
+        <div class="cabinet__body">
 
             <div class="sidebar">
         
