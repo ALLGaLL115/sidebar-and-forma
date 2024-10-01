@@ -1,5 +1,8 @@
+import validator from 'validator';
 
 $(document).ready(function() {
+    $('#additionalPhone').removeClass('profile__input:valid');
+
 
     function formatPhoneNumber(input) {
         if (input.value === '+7(') {
@@ -137,7 +140,7 @@ $(document).ready(function() {
     $('.profile__personal-data').on('submit', function(event) {
         event.preventDefault();
         const form = $('.profile__personal-data')[0];
-        const mail =$('#mail').val();
+        const email =$('#email').val();
         const phone =$('#phone').val();
         const additionalPhone =$('#additionalPhone').val();
         const surname =$('#surname').val();
@@ -149,8 +152,11 @@ $(document).ready(function() {
         const gender =$('.profile__gender-item--active').val();
         
         let invalids = [];
-
-        validate_mail(mail);
+        
+        if (!validator.isEmail(email)) {
+            console.log('Email is unvalid');
+            return;
+        }
         validate_fiofield(surname);
         validate_fiofield(name);
         if(fatherName !== '') {
@@ -177,20 +183,14 @@ $(document).ready(function() {
         })
         .then(data => {
             console.log('Success', data);
+            alert(`Message was sended on ${data['email']}`);
         })
         .catch(error => {
             console.error('Error', error);
         })
         ;
 
-        function validate_mail(mail) {
-            const regexes = [/@yandex\.ru/, /@gmail\.com/, /@mail\.ru/]
-            const isValid = regexes.some((regex)=> regex.test(mail));
-            if (!isValid) {
-                alert("Invalid email")
-                return;
-            }
-        }
+       
          function validate_fiofield(text) {
             if (2 < text.length > 20) {
                 alert("fio fields length must be higher then 2 and lowwer then 20");

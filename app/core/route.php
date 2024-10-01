@@ -3,7 +3,7 @@
 class Route {
 
     static function start() {
-        $controller_name = 'Profile';
+        $controller_name = 'cabinet';
         $action_name = 'index';
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
@@ -17,8 +17,7 @@ class Route {
         {
             $action_name = $routes[2];
         }
-        error_log($controller_name.'/'.$action_name.'/'); 
-        
+
 
         $model_name = 'Model_'.$controller_name;
         $controller_name = 'Controller_'.$controller_name;

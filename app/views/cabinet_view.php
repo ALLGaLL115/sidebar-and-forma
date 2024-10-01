@@ -39,7 +39,7 @@
         
         <?php
             if (isset($js_path)) {
-                echo "<script src={$js_path}></script>";
+                echo "<script type='module' src={$js_path}></script>";
             }
         ?>
     </div>

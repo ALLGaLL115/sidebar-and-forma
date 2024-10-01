@@ -21,7 +21,7 @@
   width: 205px;
 }
 .profile__input:valid {
-  background-image: url("http://127.0.0.1:8080/images/Icongalochka.png");
+  background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
@@ -69,7 +69,7 @@
   box-sizing: border-box;
   border: 1px solid #DFE2E4;
   border-radius: 4px;
-  background-image: url("http://127.0.0.1:8080/images/seraya-galochka.png");
+  background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/seraya-galochka.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
   padding: 0 15px;
@@ -134,7 +134,7 @@
 .profile__gender-item--active {
   color: #FF7A00;
   border: 1px solid #FF7A00;
-  background-image: url("http://127.0.0.1:8080/images/Icongalochka.png");
+  background-image: url("C:/Users/allga/FrontendProjects/html_studing/forma and sidebar/images/Icongalochka.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
@@ -149,4 +149,4 @@
   border-radius: 4px;
   background-color: #FF7A00;
   margin: 30px 0;
-}/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=cabinet.css.map */
