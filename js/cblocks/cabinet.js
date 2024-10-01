@@ -1,7 +1,8 @@
-import validator from 'validator';
+import {validator} from 'validator';
 
 $(document).ready(function() {
     $('#additionalPhone').removeClass('profile__input:valid');
+    console.log('js');
 
 
     function formatPhoneNumber(input) {
@@ -9,7 +10,7 @@ $(document).ready(function() {
             input.value = '';
             return;
         }
-        let value = input.value.replace(/\D/g, ''); // Удаляем все нецифровые символы
+        let value = input.value.replace(/\D/g, ''); 
         if (value.length > 1) {
             value = value.slice(1);
         }
@@ -28,10 +29,8 @@ $(document).ready(function() {
         input.value = formatted;
     }
 
-    // Выбираем все поля ввода с типом 'tel'
     const phoneInputs = document.querySelectorAll('input[type="tel"]');
 
-    // Добавляем обработчик событий на каждое поле
     phoneInputs.forEach(input => {
         input.addEventListener('input', function() {
             formatPhoneNumber(this);
@@ -118,24 +117,7 @@ $(document).ready(function() {
         $(this).addClass('profile__gender-item--active');
     });
 
-    // $(".profile__personal-data").on('submit', function(event) {
-
-    //     console.log('sdfdfs')
-    //     event.preventDefault(); // Останавливаем отправку формы для проверки
-    //     const form = $(this)[0];
-
-
-    //     const formData = new FormData(form);
-    //     console.log(2);
-    //     // Пример просмотра содержимого FormData
-    //     console.log(formData.entries());
-    //     for (let [key, value] of formData.entries()) {
-    //         console.log(`${key}: ${value}`);
-    //     }
-    //     //     alert('Форма успешно отправлена.');
-    //     // }
-    //     console.log(3);
-    // });
+  
 
     $('.profile__personal-data').on('submit', function(event) {
         event.preventDefault();

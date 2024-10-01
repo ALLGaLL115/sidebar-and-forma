@@ -28,9 +28,7 @@
             background-repeat: no-repeat;
             background-position: right 10px center;
         }
-        // &:invalid {
-        //     border: 1px solid red;
-        // }
+        
     }
 
 
@@ -85,45 +83,6 @@
 
 
 
-    &__popup {
-        height: 120px;
-        width: 120px;
-        display: none;
-        padding-left: 0;
-        overflow: scroll;
-        position: absolute;
-        background-color: white;
-        scrollbar-width: none;
-        border: 1px solid black;
-        border-radius: 10px;
-        z-index: 1000;
-    
-        &--active {
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            gap: 2px;
-        }
-    
-        .profile__popup p {
-            margin: 0;
-            line-height: 1.2;
-        }
-        
-        .profile__popup li {
-            list-style-type: none;
-        }
-        
-        .profile__popup-item{
-            height: 30px;
-            text-align: center;
-        
-            border-bottom: 1px solid lightgrey;
-        
-        }   
-    }
-    
-    
     
     
 

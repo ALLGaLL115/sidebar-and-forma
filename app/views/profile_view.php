@@ -117,7 +117,6 @@
             >
         </div>
 
-        <!-- <input type="button" name="saveProfile" id="saveButton" placeholder="Сохранить изменения"> -->
         <input 
             type="submit"
             class="profile__save-button" 

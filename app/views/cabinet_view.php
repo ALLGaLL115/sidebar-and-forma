@@ -36,12 +36,14 @@
         <?php include 'app/views/'.$content_view?>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type='module' src="js/cblocks/cabinet.js"></script>
         
-        <?php
+        
+        <!-- <?php
             if (isset($js_path)) {
                 echo "<script type='module' src={$js_path}></script>";
             }
-        ?>
+        ?> -->
     </div>
 
 </body>

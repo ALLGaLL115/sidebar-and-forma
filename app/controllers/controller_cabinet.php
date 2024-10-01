@@ -17,8 +17,6 @@ class Controller_Cabinet extends Controller {
     function action_index() {
         $css_path =  '../css/cblocks/cabinet.css';
         $js_path = '../js/cblocks/cabinet.js';
-        // print_r($css_path);
-        // $this->model->sendMessageToEmail('all.gall1@mail.ru', 'dkdkkdkd');
         $this->view->generate('profile_view.php', 'cabinet_view.php', null, $css_path, $js_path);
     }
 
@@ -41,8 +39,7 @@ class Controller_Cabinet extends Controller {
             } else {
                 echo json_encode(['success' => 'false', 'errors' => $errors]);
             }
-        } 
-        // $this->sendEmail();
+        }
     }
 
     function action_success() {
